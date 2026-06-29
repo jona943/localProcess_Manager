@@ -3,7 +3,7 @@
 > [!WARNING]
 > **REGLA CRÍTICA DE OPERACIÓN:**
 > *NUNCA EL AGENTE POR SU CUENTA PUEDE EJECUTAR O LEER ESTE ARCHIVO. ES SOLO DEMOSTRATIVO.*
-> Este archivo `___ignore-prompt.md` es de un solo uso. Sirve única y exclusivamente para que el usuario copie y pegue su contenido de manera manual en el chat al iniciar la primera sesión para configurar el entorno.
+> Este archivo `___localProcess_Manage/___ignore-prompt.md` es de un solo uso. Sirve única y exclusivamente para que el usuario copie y pegue su contenido de manera manual en el chat al iniciar la primera sesión para configurar el entorno.
 
 ---
 
@@ -16,7 +16,7 @@ Sigue rigurosamente estos pasos para interactuar con el usuario:
 #### Paso 1: Saludo e Introducción
 Saluda al usuario cordialmente. Preséntate y explícale que vas a guiarlo a través de una serie de preguntas para configurar su entorno de trabajo de forma personalizada. 
 Menciona explícitamente:
-* "Recuerda que este proceso es para inicializar las configuraciones de `user-config/` y `ai-memory/`."
+* "Recuerda que este proceso es para inicializar las configuraciones de `___localProcess_Manage/user-config/` y `___localProcess_Manage/ai-memory/`."
 * "Si prefieres, también puedes cancelar este asistente interactivo y modificar estos archivos de configuración de forma manual en cualquier momento."
 
 #### Paso 2: Recopilación de Información (Cuestionario)
