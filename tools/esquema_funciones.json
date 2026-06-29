@@ -1,0 +1,48 @@
+[
+  {
+    "name": "search_web",
+    "description": "Busca información actualizada en la web utilizando el motor de búsqueda especificado.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "La consulta de búsqueda a realizar."
+        }
+      },
+      "required": ["query"]
+    }
+  },
+  {
+    "name": "read_file",
+    "description": "Lee el contenido de un archivo local en el workspace.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Ruta absoluta o relativa del archivo a leer."
+        }
+      },
+      "required": ["path"]
+    }
+  },
+  {
+    "name": "write_file",
+    "description": "Escribe o sobrescribe un archivo local en el workspace con el contenido provisto.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Ruta absoluta o relativa del archivo a escribir."
+        },
+        "content": {
+          "type": "string",
+          "description": "Contenido a escribir en el archivo."
+        }
+      },
+      "required": ["path", "content"]
+    }
+  }
+]
