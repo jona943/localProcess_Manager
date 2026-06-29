@@ -107,6 +107,12 @@ gemini-cli --system prompt.md --context [nombre-de-tu-contexto].md
 1. **Uso de Inputs:** En lugar de pegar fragmentos gigantes de código directamente en el chat de la terminal, colócalos en `workspace/inputs/` y dile a la IA: *"Analiza el archivo en `workspace/inputs/controlador.js`"*. Esto mantiene la consola limpia.
 2. **Uso de Outputs:** Solicita a la IA que deposite los resultados de generación de código largos o reportes pesados en `workspace/outputs/`. Así podrás revisarlos y probarlos antes de moverlos de forma manual a tu repositorio principal.
 3. **Memoria y Errores:** Si la IA repite un error o no respeta una preferencia, agrégala en [aprendizajes_clave.md](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/ai-memory/aprendizajes_clave.md). Al inicio de cada sesión de chat, pídele al agente que lea ese archivo para que nunca lo olvide.
+4. **Clonación Interna y `.gitignore` (Control de Proyectos Existentes):** Para un control más directo sobre un proyecto existente, puedes clonar o mover la carpeta `___localProcess_Manager` directamente dentro de la raíz de dicho proyecto. Para evitar que las bitácoras, inputs, outputs y configuraciones personales de tu IA contaminen el historial de commits del proyecto principal, crea (si no existe) o edita el archivo `.gitignore` de tu proyecto y añade:
+   ```gitignore
+   # Herramientas y memoria local de IA
+   ___localProcess_Manager/
+   ```
+5. **Seguridad y Flujo de Trabajo (Ramas Alternas):** Aunque la IA actúe como un asistente didáctico, **siempre es indispensable revisar críticamente cada cambio propuesto antes de aplicarlo**. Se recomienda encarecidamente **trabajar siempre sobre una rama alterna de Git** (por ejemplo, `feature-desarrollo-ia` o `dev`) en lugar de `main` para realizar pruebas o integraciones. De esta forma, si el agente genera un cambio inesperado, podrás descartarlo fácilmente o auditarlo mediante un `git diff` antes de integrarlo de forma definitiva.
 
 ---
 
