@@ -51,22 +51,41 @@ localProcess_Manager/
 
 ---
 
+## 🚀 Inicialización Rápida y Personalización (Un Solo Uso)
+
+Si es la primera vez que utilizas este entorno, puedes automatizar tu configuración inicial con la ayuda de tu agente de IA usando el archivo [___ignore-prompt.md](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/___ignore-prompt.md):
+
+1. **Inicia el chat** con tu agente de IA preferido en este entorno.
+2. **Copia el contenido completo** de [___ignore-prompt.md](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/___ignore-prompt.md) y pégalo en el chat.
+3. El agente de IA **iniciará un flujo de preguntas interactivas** sobre tus preferencias, perfil de desarrollador, stack tecnológico, configuración de estilos, base de datos y detalles del proyecto.
+4. Tras recopilar las respuestas, el agente **escribirá y estructurará automáticamente** los datos necesarios en:
+   - `user-config/1.developer-config.md`
+   - `user-config/2.project-config.md`
+   - Los archivos correspondientes dentro de `ai-memory/`
+5. **Compilación automática**: Al finalizar el proceso, el agente compilará el prompt base ejecutando el script del compilador.
+6. **Modificación Manual**: Recuerda que puedes modificar cualquiera de estos archivos manualmente en cualquier momento si tus preferencias o requerimientos cambian.
+
+> [!IMPORTANT]
+> **REGLA DE SEGURIDAD PARA EL AGENTE:** El agente de IA **NUNCA** puede leer, invocar o ejecutar el archivo `___ignore-prompt.md` por su cuenta de forma autónoma. Es un archivo puramente demostrativo y de un solo uso para que el usuario interactúe mediante copiar y pegar al inicio de su primera sesión.
+
+---
+
 ## 🚀 ¿Cómo Empezar y Correrlo?
 
 ### 1. Clonar el repositorio
 Clona esta estructura en el mismo directorio donde tengas tus repositorios de desarrollo locales.
 
 ### 2. Configurar tus Preferencias
-Edita las tablas Markdown en los archivos correspondientes dentro de `user-config/`:
-- Configura tu nombre, el acento/personalidad de tu agente y el estilo de ayuda en [1.developer-config.md](file:///home/dev-jonathan/Escritorio/desarrollos/localProcess_Manager/user-config/1.developer-config.md).
-- Configura la ruta local, el archivo de contexto y los estándares técnicos de tu proyecto en [2.project-config.md](file:///home/dev-jonathan/Escritorio/desarrollos/localProcess_Manager/user-config/2.project-config.md).
+Si no deseas utilizar el asistente de inicialización interactiva, puedes editar manualmente las tablas Markdown en los archivos correspondientes dentro de `user-config/`:
+- Configura tu nombre, el acento/personalidad de tu agente y el estilo de ayuda en [1.developer-config.md](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/user-config/1.developer-config.md).
+- Configura la ruta local, el archivo de contexto y los estándares técnicos de tu proyecto en [2.project-config.md](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/user-config/2.project-config.md).
 
 ### 3. Compilar el Prompt
 Una vez que hayas modificado las tablas de configuración, compila el archivo final de instrucciones ejecutando en tu consola:
 ```bash
 node tools/compilar_prompt.js
 ```
-Esto generará o actualizará automáticamente el archivo [prompt.md](file:///home/dev-jonathan/Escritorio/desarrollos/localProcess_Manager/prompt.md) con las variables inyectadas.
+Esto generará o actualizará automáticamente el archivo [prompt.md](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/prompt.md) con las variables inyectadas.
 
 ### 4. Inicializar tu Agente
 Puedes inicializar tu asistente de inteligencia artificial preferido pasándole el prompt compilado e inyectando tu archivo de contexto técnico.
@@ -87,7 +106,7 @@ gemini-cli --system prompt.md --context [nombre-de-tu-contexto].md
 
 1. **Uso de Inputs:** En lugar de pegar fragmentos gigantes de código directamente en el chat de la terminal, colócalos en `workspace/inputs/` y dile a la IA: *"Analiza el archivo en `workspace/inputs/controlador.js`"*. Esto mantiene la consola limpia.
 2. **Uso de Outputs:** Solicita a la IA que deposite los resultados de generación de código largos o reportes pesados en `workspace/outputs/`. Así podrás revisarlos y probarlos antes de moverlos de forma manual a tu repositorio principal.
-3. **Memoria y Errores:** Si la IA repite un error o no respeta una preferencia, agrégala en [aprendizajes_clave.md](file:///home/dev-jonathan/Escritorio/desarrollos/localProcess_Manager/ai-memory/aprendizajes_clave.md). Al inicio de cada sesión de chat, pídele al agente que lea ese archivo para que nunca lo olvide.
+3. **Memoria y Errores:** Si la IA repite un error o no respeta una preferencia, agrégala en [aprendizajes_clave.md](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/ai-memory/aprendizajes_clave.md). Al inicio de cada sesión de chat, pídele al agente que lea ese archivo para que nunca lo olvide.
 
 ---
 
@@ -98,4 +117,4 @@ Este estándar ha sido conceptualizado, desarrollado y mantenido por **Jonathan 
 
 ## 🎁 Extras y Licencia
 - **Contribuciones:** Si tienes sugerencias sobre cómo optimizar la bitácora o quieres proponer scripts alternativos de compilación, siéntete libre de abrir un Pull Request.
-- **Licencia:** Este repositorio se distribuye bajo la licencia **MIT** en español (ver archivo [LICENSE](file:///home/dev-jonathan/Escritorio/desarrollos/localProcess_Manager/LICENSE)). Eres libre de usarlo, modificarlo y compartirlo para tus propios desarrollos personales o profesionales.
+- **Licencia:** Este repositorio se distribuye bajo la licencia **MIT** en español (ver archivo [LICENSE](file:///home/dev-jonathan/Escritorio/entorno-prueba/LocalDrop/___localProcess_Manager/LICENSE)). Eres libre de usarlo, modificarlo y compartirlo para tus propios desarrollos personales o profesionales.

@@ -1,5 +1,6 @@
 { PROMPT-GUIA }
 * REGLA DE ORO DE APRENDIZAJE: El agente NUNCA debe autocompletar, modificar o crear archivos de código del proyecto directamente sin petición explícita. Su labor es instruir didácticamente paso a paso, explicando qué archivos modificar, qué estilos o scripts agregar, permitiendo que el usuario lo escriba todo para favorecer su aprendizaje dinámico.
+* REGLA DE INICIALIZACIÓN: El agente NUNCA debe leer o ejecutar de forma autónoma el archivo `___ignore-prompt.md`. Este archivo es de un solo uso, únicamente demostrativo, y sirve para que el usuario inicie manualmente la configuración del entorno mediante copiar y pegar. El agente no debe procesar ni acceder a este archivo por cuenta propia.
 
 Revisa el contexto del repositorio `[Mi-Proyecto]/` en la ruta `[../ruta-del-proyecto]`, el usuario colocó el archivo de contexto técnico en `localProcess_Manager/[proyecto-contexto.md]`.
 
